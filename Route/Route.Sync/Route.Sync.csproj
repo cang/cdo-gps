@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2141E5D0-B115-4483-B60D-27C552F711FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Route.Sync</RootNamespace>
+    <AssemblyName>Route.Sync.sgsi</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\P301AddDataCenter.cs" />
+    <Compile Include="Models\P303RemoveDataCenter.cs" />
+    <Compile Include="Models\P305AddSerialRouteTable.cs" />
+    <Compile Include="Models\P306RemoveSerialRouteTable.cs" />
+    <Compile Include="Models\P307AddCompanyIdRouteTable.cs" />
+    <Compile Include="Models\P308RemoveCompanyRouteTable.cs" />
+    <Compile Include="Models\P309SyncSerialRouteTable.cs" />
+    <Compile Include="Models\P310SyncCompanyRouteTable.cs" />
+    <Compile Include="Models\P311SyncDataCenter.cs" />
+    <Compile Include="Models\P312GetSerialRouteTable.cs" />
+    <Compile Include="Models\P313GetCompanyIdRouteTable.cs" />
+    <Compile Include="Packets\H301AddDataCenter.cs" />
+    <Compile Include="Packets\H303RemoveDataCenter.cs" />
+    <Compile Include="Packets\H305AddSerialRouteTable.cs" />
+    <Compile Include="Packets\H306RemoveSerialRouteTable.cs" />
+    <Compile Include="Packets\H307AddCompanyIdRouteTable.cs" />
+    <Compile Include="Packets\H308RemoveCompanyRouteTable.cs" />
+    <Compile Include="Packets\H309SyncSerialRouteTable.cs" />
+    <Compile Include="Packets\H310SyncCompanyRouteTable.cs" />
+    <Compile Include="Packets\H311SyncDataCenter.cs" />
+    <Compile Include="Packets\H312GetDeviceRouteTable.cs" />
+    <Compile Include="Packets\H313GetCompanyIdRouteTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SyncFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libs\Log\Log.csproj">
+      <Project>{8EEF5243-6DBA-42D0-9134-95D21DE0895C}</Project>
+      <Name>Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StarSg.Core\StarSg.Core.csproj">
+      <Project>{1c5e6afc-3ad9-4528-a9ec-70a345481146}</Project>
+      <Name>StarSg.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Route.Core\Route.Core.csproj">
+      <Project>{DEE58E96-8A0E-4CD5-85E6-4083B11986F2}</Project>
+      <Name>Route.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shares\NodeServerPlatform.Core\NodeServerPlatform.Core.csproj">
+      <Project>{6B880BFF-5C36-443B-8657-FD4AC3268EA0}</Project>
+      <Name>NodeServerPlatform.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

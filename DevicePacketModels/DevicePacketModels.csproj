@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C9DC964-5CAC-499F-A658-2B42BFA437FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DevicePacketModels</RootNamespace>
+    <AssemblyName>DevicePacketModels.sgsi</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Events\BaseEvent.cs" />
+    <Compile Include="Events\P102OnAirCondition .cs" />
+    <Compile Include="Events\P103OffAirCondition .cs" />
+    <Compile Include="Events\P104OpenDoor.cs" />
+    <Compile Include="Events\P105CloseDoor.cs" />
+    <Compile Include="Events\P106BeginOverSpeed.cs" />
+    <Compile Include="Events\P107EndOverSpeed.cs" />
+    <Compile Include="Events\P108BeginStop.cs" />
+    <Compile Include="Events\P109EndStop.cs" />
+    <Compile Include="Events\P110DeviceReset.cs" />
+    <Compile Include="Events\P111ChangeDriver .cs" />
+    <Compile Include="Events\P112ResetDriverTimeWork .cs" />
+    <Compile Include="Events\P113ChangeSim.cs" />
+    <Compile Include="Events\P116EndGuest.cs" />
+    <Compile Include="Events\P115BeginGuest.cs" />
+    <Compile Include="Events\P114EndOvertime.cs" />
+    <Compile Include="ExternModel\GpsInfo.cs" />
+    <Compile Include="ExternModel\StatusIO.cs" />
+    <Compile Include="Events\P100OnMachine.cs" />
+    <Compile Include="Events\P101OffMachine.cs" />
+    <Compile Include="P02ResponsePacket.cs" />
+    <Compile Include="P10SyncPacket.cs" />
+    <Compile Include="PBaseSyncPacket.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="P01SyncPacket .cs" />
+    <Compile Include="Setups\P201SetupDriver .cs" />
+    <Compile Include="Setups\P202SetupDevice .cs" />
+    <Compile Include="Setups\P203SetOverSpeed .cs" />
+    <Compile Include="Setups\P204ReadDeviceInfo .cs" />
+    <Compile Include="Setups\P205DeviceInfo .cs" />
+    <Compile Include="Setups\P206ReadSimPhone .cs" />
+    <Compile Include="Setups\P207DeviceSimPhoneInfo .cs" />
+    <Compile Include="Setups\P208ReadSimMoney .cs" />
+    <Compile Include="Setups\P209DeviceSimeMoneyInfo .cs" />
+    <Compile Include="Setups\P212SetupStartDate .cs" />
+    <Compile Include="Setups\P211SetupBS.cs" />
+    <Compile Include="Setups\P210DeviceUpdate.cs" />
+    <Compile Include="Specials\P301CompressPacket .cs" />
+    <Compile Include="Specials\P302RedirectConnection .cs" />
+    <Compile Include="Utils\Crc32.cs" />
+    <Compile Include="Utils\DateTimeConvert.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DeviceCorePacket\CorePacket.csproj">
+      <Project>{4ce604de-0455-4e07-8a21-51b5cbc8f129}</Project>
+      <Name>CorePacket</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

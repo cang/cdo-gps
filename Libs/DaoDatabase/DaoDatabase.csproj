@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7748360-EA91-4DF5-AC49-497635E8BAD8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DaoDatabase</RootNamespace>
+    <AssemblyName>DaoDatabase.sgsi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aqua, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\aqua-core.3.0.0\lib\net45\Aqua.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.4.3.23, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MongoDB.Bson.2.4.3\lib\net45\MongoDB.Bson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.4.3.23, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MongoDB.Driver.2.4.3\lib\net45\MongoDB.Driver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.4.3.23, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MongoDB.Driver.Core.2.4.3\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Legacy, Version=2.4.2.27, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\mongocsharpdriver.2.4.2\lib\net45\MongoDB.Driver.Legacy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate.Caches.SysCache">
+      <HintPath>..\packages\NHibernate.Caches.SysCache.4.0.0.4000\lib\net40\NHibernate.Caches.SysCache.dll</HintPath>
+    </Reference>
+    <Reference Include="Remote.Linq, Version=5.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Remote.Linq.5.3.1\lib\net45\Remote.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMapping\Enums\HasOneType.cs" />
+    <Compile Include="AutoMapping\FactoryMap.cs" />
+    <Compile Include="AutoMapping\IAttribute\IComponentColumn.cs" />
+    <Compile Include="AutoMapping\IAttribute\IHasOneColumn.cs" />
+    <Compile Include="AutoMapping\IAttribute\IReferenceColumn.cs" />
+    <Compile Include="AutoMapping\MapAtribute\BasicColumnAttribute.cs" />
+    <Compile Include="AutoMapping\Enums\HasManyType.cs" />
+    <Compile Include="AutoMapping\IAttribute\IBasicColumn.cs" />
+    <Compile Include="AutoMapping\IAttribute\IColumn.cs" />
+    <Compile Include="AutoMapping\IAttribute\IHasManyColumn.cs" />
+    <Compile Include="AutoMapping\IAttribute\IPrimaryKeyColumn.cs" />
+    <Compile Include="AutoMapping\IAttribute\ITable.cs" />
+    <Compile Include="AutoMapping\Enums\KeyGenerateType.cs" />
+    <Compile Include="AutoMapping\MapAtribute\ComponentColumnAttribute.cs" />
+    <Compile Include="AutoMapping\MapAtribute\HasManyColumnAttribute.cs" />
+    <Compile Include="AutoMapping\MapAtribute\HasOneColumnAttribute.cs" />
+    <Compile Include="AutoMapping\MapAtribute\PrimaryKeyAttribute.cs" />
+    <Compile Include="AutoMapping\MapAtribute\ReferenceColumnAttribute.cs" />
+    <Compile Include="AutoMapping\MapAtribute\TableAttribute.cs" />
+    <Compile Include="DatabaseConfigFactory.cs" />
+    <Compile Include="DatabaseConfig.cs" />
+    <Compile Include="Extension\ObjectToJSon.cs" />
+    <Compile Include="IDbFactory.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="MongoConfig.cs" />
+    <Compile Include="MongoFactory.cs" />
+    <Compile Include="MongoUnit.cs" />
+    <Compile Include="NhibernateConfig.cs" />
+    <Compile Include="NHibernateExtensions.cs" />
+    <Compile Include="NhibernateFactory.cs" />
+    <Compile Include="NhTransformers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reponsitory.cs" />
+    <Compile Include="SqlSupport\IConvertMemberSql.cs" />
+    <Compile Include="SqlSupport\ParseExpressionToSql.cs" />
+    <Compile Include="UnitOfWorkFactory.cs" />
+    <Compile Include="NhibernateUnit.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C337248-B3A1-4EBF-B3C3-175460446E5B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UWPScs</RootNamespace>
+    <AssemblyName>UWPScs</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="Diagrams\ChannelsDiagram.cd" />
+    <None Include="Diagrams\ConnListenerDiagram.cd" />
+    <None Include="Diagrams\EndPointsDiagram.cd" />
+    <None Include="Diagrams\MessageObjectsDiagram.cd" />
+    <None Include="Diagrams\RequestReplyMessengerDiagram.cd" />
+    <None Include="Diagrams\RmiMessagesDiagram.cd" />
+    <None Include="Diagrams\ScsClientDiagram.cd" />
+    <None Include="Diagrams\ScsServerClientDiagram.cd" />
+    <None Include="Diagrams\ScsServerDiagram.cd" />
+    <None Include="Diagrams\ScsServiceClientDiagram.cd" />
+    <None Include="Diagrams\ScsServiceDiagram.cd" />
+    <None Include="Diagrams\ServiceSideClientDiagram.cd" />
+    <None Include="Diagrams\WireProtocolsDiagram.cd" />
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="RawWireProtocol.cs" />
+    <Compile Include="Collections\ThreadSafeSortedList.cs" />
+    <Compile Include="Communication\ScsServices\Client\IScsServiceClient.cs" />
+    <Compile Include="Communication\ScsServices\Client\ScsServiceClient.cs" />
+    <Compile Include="Communication\ScsServices\Client\ScsServiceClientBuilder.cs" />
+    <Compile Include="Communication\ScsServices\Communication\AutoConnectRemoteInvokeProxy.cs" />
+    <Compile Include="Communication\ScsServices\Communication\Messages\ScsRemoteException.cs" />
+    <Compile Include="Communication\ScsServices\Communication\Messages\ScsRemoteInvokeMessage.cs" />
+    <Compile Include="Communication\ScsServices\Communication\Messages\ScsRemoteInvokeReturnMessage.cs" />
+    <Compile Include="Communication\ScsServices\Communication\RemoteInvokeProxy.cs" />
+    <Compile Include="Communication\ScsServices\Service\IScsServiceApplication.cs" />
+    <Compile Include="Communication\ScsServices\Service\IScsServiceClient.cs" />
+    <Compile Include="Communication\ScsServices\Service\ScsService.cs" />
+    <Compile Include="Communication\ScsServices\Service\ScsServiceApplication.cs" />
+    <Compile Include="Communication\ScsServices\Service\ScsServiceAttribute.cs" />
+    <Compile Include="Communication\ScsServices\Service\ScsServiceBuilder.cs" />
+    <Compile Include="Communication\ScsServices\Service\ScsServiceClient.cs" />
+    <Compile Include="Communication\ScsServices\Service\ScsServiceClientFactory.cs" />
+    <Compile Include="Communication\ScsServices\Service\ServiceClientEventArgs.cs" />
+    <Compile Include="Communication\Scs\Client\ClientReConnecter.cs" />
+    <Compile Include="Communication\Scs\Client\IConnectableClient.cs" />
+    <Compile Include="Communication\Scs\Client\IScsClient.cs" />
+    <Compile Include="Communication\Scs\Client\ScsClientBase.cs" />
+    <Compile Include="Communication\Scs\Client\ScsClientFactory.cs" />
+    <Compile Include="Communication\Scs\Client\Tcp\ScsTcpClient.cs" />
+    <Compile Include="Communication\Scs\Client\Tcp\TcpHelper.cs" />
+    <Compile Include="Communication\Scs\Communication\Channels\CommunicationChannelBase.cs" />
+    <Compile Include="Communication\Scs\Communication\Channels\CommunicationChannelEventArgs.cs" />
+    <Compile Include="Communication\Scs\Communication\Channels\ConnectionListenerBase.cs" />
+    <Compile Include="Communication\Scs\Communication\Channels\ICommunicationChannel.cs" />
+    <Compile Include="Communication\Scs\Communication\Channels\IConnectionListener.cs" />
+    <Compile Include="Communication\Scs\Communication\Channels\Tcp\TcpCommunicationChannel.cs" />
+    <Compile Include="Communication\Scs\Communication\Channels\Tcp\TcpConnectionListener.cs" />
+    <Compile Include="Communication\Scs\Communication\CommunicationException.cs" />
+    <Compile Include="Communication\Scs\Communication\CommunicationStateException.cs" />
+    <Compile Include="Communication\Scs\Communication\CommunicationStates.cs" />
+    <Compile Include="Communication\Scs\Communication\EndPoints\ScsEndPoint.cs" />
+    <Compile Include="Communication\Scs\Communication\EndPoints\Tcp\ScsTcpEndPoint.cs" />
+    <Compile Include="Communication\Scs\Communication\Messages\IScsMessage.cs" />
+    <Compile Include="Communication\Scs\Communication\Messages\MessageEventArgs.cs" />
+    <Compile Include="Communication\Scs\Communication\Messages\PingMessage.cs" />
+    <Compile Include="Communication\Scs\Communication\Messages\ScsMessage.cs" />
+    <Compile Include="Communication\Scs\Communication\Messages\ScsRawDataMessage.cs" />
+    <Compile Include="Communication\Scs\Communication\Messages\ScsTextMessage.cs" />
+    <Compile Include="Communication\Scs\Communication\Messengers\IMessenger.cs" />
+    <Compile Include="Communication\Scs\Communication\Messengers\RequestReplyMessenger.cs" />
+    <Compile Include="Communication\Scs\Communication\Messengers\SynchronizedMessenger.cs" />
+    <Compile Include="Communication\Scs\Communication\Protocols\BinarySerialization\BinarySerializationProtocol.cs" />
+    <Compile Include="Communication\Scs\Communication\Protocols\BinarySerialization\BinarySerializationProtocolFactory.cs" />
+    <Compile Include="Communication\Scs\Communication\Protocols\IScsWireProtocol.cs" />
+    <Compile Include="Communication\Scs\Communication\Protocols\IScsWireProtocolFactory.cs" />
+    <Compile Include="Communication\Scs\Communication\Protocols\WireProtocolManager.cs" />
+    <Compile Include="Communication\Scs\Server\IScsServer.cs" />
+    <Compile Include="Communication\Scs\Server\IScsServerClient.cs" />
+    <Compile Include="Communication\Scs\Server\ScsServerBase.cs" />
+    <Compile Include="Communication\Scs\Server\ScsServerClient.cs" />
+    <Compile Include="Communication\Scs\Server\ScsServerFactory.cs" />
+    <Compile Include="Communication\Scs\Server\ScsServerManager.cs" />
+    <Compile Include="Communication\Scs\Server\ServerClientEventArgs.cs" />
+    <Compile Include="Communication\Scs\Server\Tcp\ScsTcpServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threading\SequentialItemProcessor.cs" />
+    <Compile Include="Threading\Timer.cs" />
+    <EmbeddedResource Include="Properties\UWPScs.rd.xml" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

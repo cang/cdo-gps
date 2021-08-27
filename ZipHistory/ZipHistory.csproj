@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43858DF1-0846-416E-A989-81DC5C4C8023}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZipHistory</RootNamespace>
+    <AssemblyName>ZipHistory</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeviceLogAgainCollection.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datacenter\Datacenter.Api\Datacenter.Api.csproj">
+      <Project>{0B5FD1F9-F06E-48E2-858B-F195DBB8B6CE}</Project>
+      <Name>Datacenter.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Datacenter\DataCenter.Core\DataCenter.Core.csproj">
+      <Project>{5bfdd40b-243d-4c89-b4c9-6dc10aaf3285}</Project>
+      <Name>DataCenter.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Datacenter\Datacenter.Model\Datacenter.Model.csproj">
+      <Project>{6cffe42a-0e03-40b4-aa1f-74500cff2b05}</Project>
+      <Name>Datacenter.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Datacenter\QueryRoute\Datacenter.QueryRoute.csproj">
+      <Project>{b8f10f13-f249-448e-aa57-062459a1d076}</Project>
+      <Name>Datacenter.QueryRoute</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeviceCorePacket\CorePacket.csproj">
+      <Project>{4ce604de-0455-4e07-8a21-51b5cbc8f129}</Project>
+      <Name>CorePacket</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DevicePacketModels\DevicePacketModels.csproj">
+      <Project>{4C9DC964-5CAC-499F-A658-2B42BFA437FB}</Project>
+      <Name>DevicePacketModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\ConfigFile\ConfigFile.csproj">
+      <Project>{14E62B33-4BBF-4F53-8640-1183533B3CEA}</Project>
+      <Name>ConfigFile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\DaoDatabase\DaoDatabase.csproj">
+      <Project>{d7748360-ea91-4df5-ac49-497635e8bad8}</Project>
+      <Name>DaoDatabase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Route\Route.Api\Route.Api.csproj">
+      <Project>{B9A6D5C9-5BB7-4AE7-82C8-C7831A7247B6}</Project>
+      <Name>Route.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StarSg.Core\StarSg.Core.csproj">
+      <Project>{1c5e6afc-3ad9-4528-a9ec-70a345481146}</Project>
+      <Name>StarSg.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StarSg.PlanJob\StarSg.PlanJob.csproj">
+      <Project>{de1ffbfb-373c-4399-8011-9f8c0e5f463f}</Project>
+      <Name>StarSg.PlanJob</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StarSg.Utils\StarSg.Utils.csproj">
+      <Project>{463d134f-61f7-4dd9-bae0-a598e04778da}</Project>
+      <Name>StarSg.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

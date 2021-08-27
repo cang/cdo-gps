@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{463D134F-61F7-4DD9-BAE0-A598E04778DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StarSg.Utils</RootNamespace>
+    <AssemblyName>StarSg.Utils.sgsi</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Geos\GeoLocation.cs" />
+    <Compile Include="Geos\GeoLocationAddress.cs" />
+    <Compile Include="Geos\GeoPolygon.cs" />
+    <Compile Include="Models\Auth\UserInfoTranfer.cs" />
+    <Compile Include="Models\Auth\AccessHistoryTranfer.cs" />
+    <Compile Include="Models\Auth\UserLogTranfer.cs" />
+    <Compile Include="Models\DatacenterResponse\Area\AreaAdd.cs" />
+    <Compile Include="Models\DatacenterResponse\Area\AreaGetMulti.cs" />
+    <Compile Include="Models\DatacenterResponse\Area\AreaGetSingle.cs" />
+    <Compile Include="Models\DatacenterResponse\Compnay\CompanyAdd.cs" />
+    <Compile Include="Models\DatacenterResponse\Compnay\CompanyGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Compnay\CompanyGetAll.cs" />
+    <Compile Include="Models\DatacenterResponse\Compnay\CompanyGetSingle.cs" />
+    <Compile Include="Models\DatacenterResponse\Device\DeviceGetMultiEx.cs" />
+    <Compile Include="Models\DatacenterResponse\DeviceGroup\DeviceGroupAdd.cs" />
+    <Compile Include="Models\DatacenterResponse\DeviceGroup\DeviceGroupGetAll.cs" />
+    <Compile Include="Models\DatacenterResponse\DeviceGroup\DeviceGroupGet.cs" />
+    <Compile Include="Models\DatacenterResponse\DeviceGroup\DeviceGroupGetSingle.cs" />
+    <Compile Include="Models\DatacenterResponse\DeviceModel\DeviceModelGetMulti.cs" />
+    <Compile Include="Models\DatacenterResponse\DeviceModel\DeviceModelGetSingle.cs" />
+    <Compile Include="Models\DatacenterResponse\Device\DeviceAdd.cs" />
+    <Compile Include="Models\DatacenterResponse\Device\DeviceGetMulti.cs" />
+    <Compile Include="Models\DatacenterResponse\Device\DeviceGetSingle.cs" />
+    <Compile Include="Models\DatacenterResponse\Driver\DriverAdd.cs" />
+    <Compile Include="Models\DatacenterResponse\Driver\DriverGetMulti.cs" />
+    <Compile Include="Models\DatacenterResponse\Driver\DriverGetSingle.cs" />
+    <Compile Include="Models\DatacenterResponse\Enterprise\DeviceFuelLogGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Enterprise\DeviceFuelReport.cs" />
+    <Compile Include="Models\DatacenterResponse\Enterprise\DeviceMachineGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Enterprise\DeviceSessionGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Enterprise\DeviceStopLogGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Enterprise\DeviceTemperLogGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Enterprise\DeviceTripGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Enterprise\EnterpriseDeviceGuestReportTranfer.cs" />
+    <Compile Include="Models\DatacenterResponse\Enterprise\EnterpriseDeviceFuelReportTranfer.cs" />
+    <Compile Include="Models\DatacenterResponse\Enterprise\EnterpriseDeviceAllReportTranfer.cs" />
+    <Compile Include="Models\DatacenterResponse\Enterprise\EnterpriseDeviceAllReportGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Enterprise\AreaPointSessionReportGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Enterprise\PointReportGet.cs" />
+    <Compile Include="Models\DatacenterResponse\FuelSheet\FuelSheetGetMulti.cs" />
+    <Compile Include="Models\DatacenterResponse\FuelSheet\FuelSheetGetSingle.cs" />
+    <Compile Include="Models\DatacenterResponse\Geo\GeoAddress.cs" />
+    <Compile Include="Models\DatacenterResponse\Geo\GeoAddressResponse.cs" />
+    <Compile Include="Models\DatacenterResponse\Maintenance\ChangeSpecModelGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Maintenance\MaintenanceReportGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Maintenance\ModelSpecAdd.cs" />
+    <Compile Include="Models\DatacenterResponse\Maintenance\ModelSpecGetMulti.cs" />
+    <Compile Include="Models\DatacenterResponse\Maintenance\ModelSpecGetSingle.cs" />
+    <Compile Include="Models\DatacenterResponse\Maintenance\ModelSpecificationTranfer.cs" />
+    <Compile Include="Models\DatacenterResponse\PointGps\PointGpsAdd.cs" />
+    <Compile Include="Models\DatacenterResponse\PointGps\PointGpsGetMulti.cs" />
+    <Compile Include="Models\DatacenterResponse\PointGps\PointGpsGetSingle.cs" />
+    <Compile Include="Models\DatacenterResponse\Qc31\AllDeviceReportGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Qc31\AllDriverReportGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Qc31\DeviceOverSpeedLogGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Qc31\DevicePauseLogGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Qc31\DeviceSpeedTraceLogGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Qc31\DeviceTripLogGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Qc31\DriverTime31LogGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Setup\DeviceSettingGet.cs" />
+    <Compile Include="Models\DatacenterResponse\Setup\DeviceSettingGetMulti.cs" />
+    <Compile Include="Models\DatacenterResponse\Setup\DeviceSettingInfo.cs" />
+    <Compile Include="Models\DatacenterResponse\Setup\SetupGetMulti.cs" />
+    <Compile Include="Models\DatacenterResponse\Setup\SetupInfoTranfer.cs" />
+    <Compile Include="Models\DatacenterResponse\SpecialTour\SpecialTourGetMulti.cs" />
+    <Compile Include="Models\DatacenterResponse\Status\StatusDeviceGet.cs" />
+    <Compile Include="Models\DatacenterResponse\System\SysLogResponse.cs" />
+    <Compile Include="Models\DeviceActivityType.cs" />
+    <Compile Include="Models\DeviceStatusType.cs" />
+    <Compile Include="Models\Tranfer\CameraImageLogTranfer.cs" />
+    <Compile Include="Models\Tranfer\CheckZone\CheckZoneTranfer.cs" />
+    <Compile Include="Models\Tranfer\CheckZone\Point.cs" />
+    <Compile Include="Models\Tranfer\CompanyTranfer.cs" />
+    <Compile Include="Models\Tranfer\DeviceChangeTranfer.cs" />
+    <Compile Include="Models\Tranfer\DeviceConfigTranfer.cs" />
+    <Compile Include="Models\Tranfer\DeviceDebugTranfer.cs" />
+    <Compile Include="Models\Tranfer\DeviceGroupTranfer.cs" />
+    <Compile Include="Models\Tranfer\DeviceManager\DeviceOilUseDetail.cs" />
+    <Compile Include="Models\Tranfer\DeviceManager\DeviceOilUseTranfer.cs" />
+    <Compile Include="Models\Tranfer\DeviceManager\DeviceSessionLogTranfer.cs" />
+    <Compile Include="Models\Tranfer\DeviceManager\DeviceTraceLogTranfer.cs" />
+    <Compile Include="Models\Tranfer\DeviceManager\DeviceTraceSheetTranfer.cs" />
+    <Compile Include="Models\Tranfer\DeviceManager\DeviceTripTranfer.cs" />
+    <Compile Include="Models\Tranfer\DeviceManager\RefuelLogTranfer.cs" />
+    <Compile Include="Models\Tranfer\SpecialTourTranfer.cs" />
+    <Compile Include="Models\Tranfer\FuelSheetTranfer.cs" />
+    <Compile Include="Models\Tranfer\DeviceModelTranfer.cs" />
+    <Compile Include="Models\Tranfer\DeviceMoneyTranfer.cs" />
+    <Compile Include="Models\Tranfer\DeviceRawBasicData.cs" />
+    <Compile Include="Models\Tranfer\DeviceSpeedLogTranfer.cs" />
+    <Compile Include="Models\Tranfer\DeviceStatusTranfer.cs" />
+    <Compile Include="Models\Tranfer\DeviceTranferEx.cs" />
+    <Compile Include="Models\Tranfer\DeviceTranfer.cs" />
+    <Compile Include="Models\Tranfer\DriverSessionLogTranfer.cs" />
+    <Compile Include="Models\Tranfer\Driver\DriverTranfer.cs" />
+    <Compile Include="Models\Tranfer\GpsCheckPoint\GpsCheckPointTranfer.cs" />
+    <Compile Include="Models\Tranfer\GpsPoint.cs" />
+    <Compile Include="Models\Tranfer\ImageCaptureInfo.cs" />
+    <Compile Include="Models\Tranfer\LogManager\DeviceRawLogTranfer.cs" />
+    <Compile Include="Models\Tranfer\Maintenance\CompanyModelSpecTranfer.cs" />
+    <Compile Include="Models\Tranfer\Maintenance\MaintenanceHistoryTranfer.cs" />
+    <Compile Include="Models\Tranfer\Maintenance\MaintenanceReportTranfer.cs" />
+    <Compile Include="Models\Tranfer\Oil\OilSheetTranfer.cs" />
+    <Compile Include="Models\Tranfer\OverSpeedLogTranfer.cs" />
+    <Compile Include="Models\Tranfer\Qc09\DriverSession10HTranfer.cs" />
+    <Compile Include="Models\Tranfer\Qc09\GeneralReport09Log.cs" />
+    <Compile Include="Models\Tranfer\Qc09\LostDataReport09Tranfer.cs" />
+    <Compile Include="Models\Tranfer\Qc09\OverSpeedLog09Tranfer.cs" />
+    <Compile Include="Models\Tranfer\Qc09\OverSpeedReport09Tranfer.cs" />
+    <Compile Include="Models\Tranfer\Qc31\DevicePauseLogTranfer.cs" />
+    <Compile Include="Models\Tranfer\Qc31\DeviceTripLogTranfer.cs" />
+    <Compile Include="Models\Tranfer\Qc31\GeneralCompanyReport.cs" />
+    <Compile Include="Models\Tranfer\Qc31\GeneralReport.cs" />
+    <Compile Include="Models\Tranfer\Setup\BaseSetup.cs" />
+    <Compile Include="Models\Tranfer\Setup\SetupDriver.cs" />
+    <Compile Include="Models\Tranfer\Setup\SetupNormal.cs" />
+    <Compile Include="Models\Tranfer\Setup\SetupStartDate.cs" />
+    <Compile Include="Models\Tranfer\Setup\SetupBS.cs" />
+    <Compile Include="Models\Tranfer\Setup\SetupOverSpeed.cs" />
+    <Compile Include="Models\Tranfer\Setup\UpdateFirmware.cs" />
+    <Compile Include="Models\Tranfer\SimManager\SimInfoTranfer.cs" />
+    <Compile Include="Models\Tranfer\SimManager\SimTraceLogTranfer.cs" />
+    <Compile Include="Models\Tranfer\SimManager\SimUpdateTranfer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\BitField.cs" />
+    <Compile Include="Utils\Delay\DelayActionManager.cs" />
+    <Compile Include="Utils\Delay\IRequestManager.cs" />
+    <Compile Include="Utils\Delay\RequestInfo.cs" />
+    <Compile Include="Utils\Delay\RequestManager.cs" />
+    <Compile Include="Utils\EncryptData.cs" />
+    <Compile Include="Utils\Crypto.cs" />
+    <Compile Include="Geos\GeoUtil.cs" />
+    <Compile Include="Utils\ExpressionUtil.cs" />
+    <Compile Include="Utils\SerializerObject.cs" />
+    <Compile Include="Utils\StructBitConvert.cs" />
+    <Compile Include="Utils\ZipExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Libs\Log\Log.csproj">
+      <Project>{8eef5243-6dba-42d0-9134-95d21de0895c}</Project>
+      <Name>Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StarSg.Core\StarSg.Core.csproj">
+      <Project>{1c5e6afc-3ad9-4528-a9ec-70a345481146}</Project>
+      <Name>StarSg.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
